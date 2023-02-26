@@ -85,15 +85,13 @@ main:
 		#kiem tra max 
 		slt $t2, $t3, $a2
 		beqz $t2, SSMax
-
+		prev:
 		slt $t2, $a3, $t3
 		beqz $t2, SSMin
 		j Loop
 	SSMax:
 		move $a2, $t3
-		slt $t2, $a3, $t3
-		beqz $t2, SSMin
-		j Loop
+		j prev
 	SSMin:
 		 move $a3, $t3
 		 j Loop
