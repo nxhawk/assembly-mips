@@ -65,6 +65,6 @@ main:
 			syscall
 			subi $s0, $s0, 1
 			subi $t0, $t0, 1
-			beq $s0, -1, re
+			beq $s0, -, re
 			j lop
 	re:
